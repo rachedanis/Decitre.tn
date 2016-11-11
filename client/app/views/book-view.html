@@ -1,0 +1,15 @@
+<ng-include src="'views/book-nav.html'"></ng-include>
+<div class="col-md-4">
+  <br>
+  <youtube src="book.url"></youtube>
+  <br>
+</div>
+<div class="col-md-8" ng-controller="CartAddCtrl">
+  <br>
+  <h4>Titre: </h4>{{ book.title }}
+  <h4>ISBN: </h4>{{ book.isbn }}
+  <h4>Auteur: </h4>{{ book.author }}
+  <h4>Categorie: </h4>{{ book.category }}
+  <hr>
+  <a ng-click="saveCart(book)" class="btn btn-danger"><span class="glyphicon  glyphicon-shopping-cart"></span> Ajouter au panier</a>
+</div>

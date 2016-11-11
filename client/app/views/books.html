@@ -1,0 +1,30 @@
+<hr>
+
+  <div class="form-group has-feedback has-feedback-left">
+     <input class="form-control" placeholder="Search" ng-model="query">
+     <i class="form-control-feedback glyphicon glyphicon-search"></i>
+  </div>
+
+<br>
+<table class="table table-striped">
+  <thead>
+    <th>Titre</th>
+    <th>ISBN</th>
+    <th>Auteur</th>
+    <th>Categorie</th>
+    <th>Ajouter au panier</th>
+  </thead>
+  <tbody ng-controller="CartAddCtrl">
+    <tr ng-repeat="book in books | filter:query">
+      <td><a ng-href="/#/book/{{ book._id }}">{{ book.title }}</a></td>
+      <td>{{ book.isbn }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.category }}</td>
+      <td>
+        <div class="button-group">
+          <a ng-click="saveCart(book)" class="btn btn-danger"><span class="glyphicon  glyphicon-shopping-cart"></span> Ajouter au panier</a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

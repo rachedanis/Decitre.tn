@@ -1,0 +1,13 @@
+<ng-include src="'views/book-nav.html'"></ng-include>
+<div class="col-md-4">
+  <br>
+  <youtube src="cart.url"></youtube>
+</div>
+<div class="col-md-8" ng-controller="CartsCtrl">
+  <h4>Title: </h4>{{ cart.title }}
+  <h4>ISBN: </h4>{{ cart.isbn }}
+  <h4>Author: </h4>{{ cart.author }}
+  <h4>Category: </h4>{{ cart.category }}
+  <hr>
+  <a ng-href="/#/cart/{{ cart._id }}/delete" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span> Supprimer du Panier</a>
+</div>
